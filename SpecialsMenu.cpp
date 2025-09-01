@@ -1,8 +1,8 @@
 #include "SpecialsMenu.h"
 
-SpecialsMenu::SpecialsMenu(Observer* observer, Pizza* pizza) : Menus(observer, pizza) {
-}
-
 void SpecialsMenu::notifyObservers(const std::string& message) const {
-   
+   std::cout << "SPECIALS MENU UPDATE: " << message << std::endl;
+   for (auto observer : observers) {
+       observer->update(message);
+   }
 }

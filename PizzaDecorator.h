@@ -5,10 +5,11 @@
 #include <string>
 
 class PizzaDecorator : public Pizza {
-    private:
-        Pizza pizza;
+    protected:
+        Pizza* pizza;
     public:
-        PizzaDecorator(Pizza pizza);
+        PizzaDecorator(Pizza* pizza);
+        ~PizzaDecorator();
         double getPrice() const override;
         std::string getName() const override;
 };

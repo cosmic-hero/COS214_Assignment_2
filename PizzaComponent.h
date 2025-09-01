@@ -4,13 +4,14 @@
 #include <string>
 
 class PizzaComponent {
-    private:
+    protected:
         double price;
         std::string name;
     public:
         PizzaComponent(const std::string& name, double price);
-        std::string getName() const;
-        double getPrice() const;
+        virtual ~PizzaComponent() = default;
+        virtual std::string getName() const = 0 ;
+        virtual double getPrice() const = 0;
 };
 
 #endif

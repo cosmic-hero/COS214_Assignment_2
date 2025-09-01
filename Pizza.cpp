@@ -1,5 +1,5 @@
 #include "Pizza.h"
 
-std::string Pizza::printPizza() {
-    //implement function
+void Pizza::printPizza() {
+    std::cout << "Pizza: " << getName() << ", Price: R " << getPrice() << std::endl;
 }

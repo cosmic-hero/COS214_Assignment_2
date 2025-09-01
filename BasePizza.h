@@ -5,9 +5,10 @@
 
 class BasePizza : public Pizza {
     private:
-        PizzaComponent toppings;
+        PizzaComponent* toppings;
     public:
-        BasePizza(PizzaComponent toppings);
+        BasePizza(PizzaComponent* toppings);
+        ~BasePizza();
         double getPrice() const override;
         std::string getName() const override;
 };

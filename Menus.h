@@ -4,13 +4,14 @@
 #include "Observer.h"
 #include "Pizza.h"
 #include <string>
+#include <vector>
 
 class Menus{
-    private:
-        Observer* observer;
-        Pizza* pizza;
+    protected:
+        std::vector<Observer*> observers;
+        std::vector<Pizza*> pizzas;
     public:
-        Menus(Observer* observer, Pizza* pizza);
+        virtual ~Menus() = default;
         void addObserver(Observer* observer);
         void removeObserver(Observer* observer);
         virtual void notifyObservers(const std::string& message) const = 0;

@@ -6,7 +6,7 @@
 
 class StuffedCrust : public PizzaDecorator {
     public:
-        StuffedCrust(Pizza pizza);
+        StuffedCrust(Pizza* pizza);
         double getPrice() const override;
         std::string getName() const override;
 };

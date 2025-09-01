@@ -5,7 +5,6 @@
 
 class SpecialsMenu : public Menus {
     public:
-        SpecialsMenu(Observer* observer, Pizza* pizza);
         void notifyObservers(const std::string& message) const override;
 };
 
